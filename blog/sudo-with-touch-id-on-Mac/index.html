@@ -619,45 +619,29 @@
 <p>Open the Terminal application on your Mac.</p>
 </li>
 <li>
-<p>Type the following command to open the <code>sudo</code> PAM configuration file using the <code>vim</code> text editor:</p>
-</li>
-</ol>
+<p>Type the following command to open the <code>sudo</code> PAM configuration file using the <code>vim</code> text editor:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/pam.d/sudo
-</code></pre></div>
-<ol>
-<li>Add the following line at the top of the file:</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>Add the following line at the top of the file:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>auth<span class="w"> </span>sufficient<span class="w"> </span>pam_tid.so
 </code></pre></div>
-<p>This line enables Touch ID authentication for <code>sudo</code> commands.</p>
-<ol>
-<li>
-<p>If you use TMUX, you'll need to attach the PAM (Pluggable Authentication Module) to TMUX to ensure that the Touch ID integration works within TMUX sessions. To do this, follow these additional steps:</p>
-</li>
-<li>
-<p>Install <code>pam-reattach</code> using Homebrew by running the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew<span class="w"> </span>install<span class="w"> </span>pam-reattach
+This line enables Touch ID authentication for <code>sudo</code> commands.</li>
+<li>If you use TMUX, you'll need to attach the PAM (Pluggable Authentication Module) to TMUX to ensure that the Touch ID integration works within TMUX sessions. To do this, follow these additional steps:<ul>
+<li>Install <code>pam-reattach</code> using Homebrew by running the following command:
+ <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew<span class="w"> </span>install<span class="w"> </span>pam-reattach
+</code></pre></div></li>
+<li>Open the <code>sudo</code> PAM configuration file again:
+ <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/pam.d/sudo
+</code></pre></div></li>
+<li>Add the following line below the previous line:
+ <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>auth<span class="w"> </span>optional<span class="w"> </span>/opt/homebrew/lib/pam/pam_reattach.so
 </code></pre></div>
+These lines enable Touch ID support within TMUX sessions as well.</li>
+</ul>
 </li>
-<li>
-<p>Open the <code>sudo</code> PAM configuration file again:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/pam.d/sudo
-</code></pre></div>
-</li>
-<li>
-<p>Add the following line below the previous line:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>auth<span class="w"> </span>optional<span class="w"> </span>/opt/homebrew/lib/pam/pam_reattach.so
-</code></pre></div>
-</li>
-</ol>
-<p>These lines enable Touch ID support within TMUX sessions as well.</p>
-<ol>
-<li>
-<p>Save the changes to the file.</p>
-</li>
-<li>
-<p>You might need to reboot your Mac or restart any open Terminal or TMUX sessions for the changes to take effect.</p>
-</li>
+<li>Save the changes to the file.</li>
+<li>You might need to reboot your Mac or restart any open Terminal or TMUX sessions for the changes to take effect.</li>
 </ol>
 <p>Here's a convenient script that automates these steps for you:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/usr/bin/env bash</span>
