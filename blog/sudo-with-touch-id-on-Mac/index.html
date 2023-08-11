@@ -10,25 +10,27 @@
         <meta name="author" content="Nima Saed">
       
       
-        <link rel="canonical" href="https://nmsd.xyz/">
+        <link rel="canonical" href="https://nmsd.xyz/blog/sudo-with-touch-id-on-Mac/">
       
       
+        <link rel="prev" href="../..">
       
-        <link rel="next" href="blog/sudo-with-touch-id-on-Mac/">
       
-      <link rel="icon" href="favicon.png">
+        <link rel="next" href="../AWS-Profile-changer/">
+      
+      <link rel="icon" href="../../favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
-        <title>nmsd.xyz</title>
+        <title>Enabling Touch ID for sudo - nmsd.xyz</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -44,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nima-saed" class="md-skip">
+        <a href="#enabling-touch-id-for-sudo-on-macos" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +89,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="nmsd.xyz" class="md-header__button md-logo" aria-label="nmsd.xyz" data-md-component="logo">
+    <a href="../.." title="nmsd.xyz" class="md-header__button md-logo" aria-label="nmsd.xyz" data-md-component="logo">
       
   
   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-alt" class="svg-inline--fa fa-shield-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Enabling Touch ID for sudo 
             
           </span>
         </div>
@@ -162,12 +164,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../.." class="md-tabs__link">
       About
     </a>
   </li>
@@ -175,6 +175,8 @@
       
         
   
+  
+    
   
 
 
@@ -187,7 +189,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="blog/sudo-with-touch-id-on-Mac/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Blog
       </a>
     </li>
@@ -210,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="notes/bash-tips/" class="md-tabs__link">
+      <a href="../../notes/bash-tips/" class="md-tabs__link">
         Notes
       </a>
     </li>
@@ -236,9 +238,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -248,7 +248,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="nmsd.xyz" class="md-nav__button md-logo" aria-label="nmsd.xyz" data-md-component="logo">
+    <a href="../.." title="nmsd.xyz" class="md-nav__button md-logo" aria-label="nmsd.xyz" data-md-component="logo">
       
   
   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-alt" class="svg-inline--fa fa-shield-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path></svg>
@@ -265,52 +265,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          About
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         About
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ethical-hacker-software-security-engineer-devsecops-engineer" class="md-nav__link">
-    Ethical Hacker, Software Security Engineer, DevSecOps Engineer
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -321,14 +280,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
@@ -345,7 +306,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Blog
@@ -356,14 +317,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
       
       
         
@@ -376,7 +339,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           2023
@@ -387,11 +350,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="blog/sudo-with-touch-id-on-Mac/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Enabling Touch ID for sudo 
       </a>
+      
     </li>
   
 
@@ -441,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/AWS-Profile-changer/" class="md-nav__link">
+      <a href="../AWS-Profile-changer/" class="md-nav__link">
         AWS Profile Changer
       </a>
     </li>
@@ -493,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/Metasploit-Framework-console/" class="md-nav__link">
+      <a href="../Metasploit-Framework-console/" class="md-nav__link">
         MSF on Docker
       </a>
     </li>
@@ -584,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes/bash-tips/" class="md-nav__link">
+      <a href="../../notes/bash-tips/" class="md-nav__link">
         Bash Tips
       </a>
     </li>
@@ -613,9 +586,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -626,21 +597,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ethical-hacker-software-security-engineer-devsecops-engineer" class="md-nav__link">
-    Ethical Hacker, Software Security Engineer, DevSecOps Engineer
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -655,19 +611,72 @@
                   
 
 
-<p><img src="https://avatars.githubusercontent.com/u/10860598" alt="Avatar" style="display: block; margin-bottom: -10%; margin-left: auto; margin-right: 0px; width: 250px; border-radius:50%;opacity: 0.8;"></p>
-<h1 id="nima-saed">Nima Saed</h1>
-<h2 id="ethical-hacker-software-security-engineer-devsecops-engineer">Ethical Hacker, Software Security Engineer, DevSecOps Engineer</h2>
-<p>Nima is a skilled security consultant at <a href="https://xebia.com">Xebia</a> in the Netherlands. They specialize in offering top-notch consultancy services for digital transformation.</p>
-<p>Nima has an impressive 19-year career in the IT industry, with a specialization in security for the last 13 years. Nima started as a software security engineer and worked as an ethical hacker.</p>
-<p>Nima is well-educated in security tech and cryptography, with expertise in software security, encryption, and digital signatures. He conducts effective penetration tests on software components, particularly those related to authentication and authorization.</p>
-<p>Throughout Nima's career, he has worked across diverse sectors, including the medical, education, metal, and software industries. Each industry presents its unique set of privacy and security challenges. However, Nima's goal remains constant: introducing security processes as enablers rather than blockers. He firmly believes in the power of automation and simplicity, consistently incorporating these principles at the core of his approach.</p>
-<p>Nima is dedicated to guaranteeing your security and triumph in the digital realm. His extensive experience, profound knowledge, and unwavering commitment to excellence empower him to impact your company's security posture substantially.</p>
-<p>email: <a href="mailto:nsaed@xebia.com">nsaed@xebia.com</a></p>
+<h1 id="enabling-touch-id-for-sudo-on-macos">Enabling Touch ID for <code>sudo</code> on macOS</h1>
+<p>Did you know that you can utilize your Mac's Touch ID feature to execute <code>sudo</code> commands without the need to enter your password? This convenient trick can save you time and streamline your workflow. Let's delve into the process of setting it up.</p>
+<p>To enable Touch ID for <code>sudo</code>, follow these steps:</p>
+<ol>
+<li>
+<p>Open the Terminal application on your Mac.</p>
+</li>
+<li>
+<p>Type the following command to open the <code>sudo</code> PAM configuration file using the <code>vim</code> text editor:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/pam.d/sudo
+</code></pre></div>
+<ol>
+<li>Add the following line at the top of the file:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>auth<span class="w"> </span>sufficient<span class="w"> </span>pam_tid.so
+</code></pre></div>
+<p>This line enables Touch ID authentication for <code>sudo</code> commands.</p>
+<ol>
+<li>
+<p>If you use TMUX, you'll need to attach the PAM (Pluggable Authentication Module) to TMUX to ensure that the Touch ID integration works within TMUX sessions. To do this, follow these additional steps:</p>
+</li>
+<li>
+<p>Install <code>pam-reattach</code> using Homebrew by running the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew<span class="w"> </span>install<span class="w"> </span>pam-reattach
+</code></pre></div>
+</li>
+<li>
+<p>Open the <code>sudo</code> PAM configuration file again:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/pam.d/sudo
+</code></pre></div>
+</li>
+<li>
+<p>Add the following line below the previous line:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>auth<span class="w"> </span>optional<span class="w"> </span>/opt/homebrew/lib/pam/pam_reattach.so
+</code></pre></div>
+</li>
+</ol>
+<p>These lines enable Touch ID support within TMUX sessions as well.</p>
+<ol>
+<li>
+<p>Save the changes to the file.</p>
+</li>
+<li>
+<p>You might need to reboot your Mac or restart any open Terminal or TMUX sessions for the changes to take effect.</p>
+</li>
+</ol>
+<p>Here's a convenient script that automates these steps for you:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/usr/bin/env bash</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span>nounset<span class="w"> </span><span class="c1"># Treat unset variables as an error</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># This script is going to add touch id to sudo command, including inside TMUX</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;NOTICE: you need to install pam-reattach to use it in TMUX&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nv">sudo_path</span><span class="o">=</span><span class="s2">&quot;/etc/pam.d/sudo&quot;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span><span class="nv">$sudo_path</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;2s/^/auth\t   sufficient\t  pam_tid.so\n/&#39;</span><span class="w"> </span><span class="nv">$sudo_path</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;3s/^/auth\t   optional\t  \/opt\/homebrew\/lib\/pam\/pam_reattach.so\n/&#39;</span><span class="w"> </span><span class="nv">$sudo_path</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>chmod<span class="w"> </span><span class="m">444</span><span class="w"> </span><span class="nv">$sudo_path</span>
+</code></pre></div>
+<p>Just execute this script in your Terminal, and it will handle the necessary configurations for you.</p>
+<p>With Touch ID-enabled <code>sudo</code>, you can now perform administrative tasks more conveniently and securely. This feature not only eliminates the need to type your password but also enhances the overall accessibility of your Mac. Give it a try and experience the seamless power of Touch ID in your command-line activities!"</p>
 
 
-
-  
 
 
 
@@ -752,10 +761,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
       
     
   </body>

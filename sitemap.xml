@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nmsd.xyz/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nmsd.xyz/blog/AWS-Profile-changer/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nmsd.xyz/blog/Metasploit-Framework-console/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nmsd.xyz/blog/sudo-with-touch-id-on-Mac/</loc>
+         <lastmod>2023-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nmsd.xyz/notes/bash-tips/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
